@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+ # 🚀 Personal Website Project
 
-## Getting Started
+## 📌 Overview
+This is a personal website built using Next.js. The project demonstrates modern web development practices including component-based architecture, reusable UI components, and continuous deployment.
 
-First, run the development server:
+The goal of this project is to build a scalable personal portfolio that can later evolve into a full web application or business platform.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Features
+- Responsive personal website layout
+- Dynamic routing using Next.js App Router
+- Reusable components (ProductCard)
+- Products page (`/products`)
+- Clean and modular file structure
+- Automatic deployment on every update
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Technologies Used
+- Next.js (React Framework)
+- TypeScript
+- HTML / CSS
+- Git & GitHub
+- Vercel for deployment
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 New Components / Pages Added
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 1. Products Page
+**File:** `app/products/page.tsx`  
+This page displays a list of products and demonstrates routing using the Next.js App Router.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2. Product Card Component
+**File:** `app/components/ProductCard.tsx`  
+A reusable UI component used to display product information in a structured format.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🌐 Live Demo
+Deployed using Vercel:
+https://your-vercel-link.vercel.app
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🔄 Deployment Workflow
+This project is continuously deployed using Vercel. Every push to the main branch automatically triggers a new deployment and updates the live website.
+
+---
+
+## 🚀 Future Improvements
+- Add backend database integration
+- Implement authentication system
+- Convert into a full e-commerce platform
+- Add analytics dashboard for data insights
+
+---
+
+## 👨‍💻 Author
+Soliver Pierre

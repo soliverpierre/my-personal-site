@@ -1,25 +1,37 @@
- import ProductCard from "../components/ProductCard";
+"use client";
 
-export default function ProductsPage() {
-  const products = [
-    { name: "Laptop", price: 1200 },
-    { name: "Mouse", price: 75 },
-    { name: "Headphones", price: 200 },
-  ];
+import { useEffect, useState } from "react";
+import ProductCard from "../components/ProductCard";
+
+type Product = {
+  id: number;
+  title: string;
+  price: number;
+};
+
+export default function Products() {
+  const [products, setProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    async function fetchProducts() {
+      const res = await fetch("https://fakestoreapi.com/products");
+      const data: Product[] = await res.json();
+
+      setProducts(data);
+    }
+
+    fetchProducts();
+  }, []);
 
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold mb-4">Products</h1>
+    <div className="p-5">
+      <h1 className="text-2xl font-bold mb-4">Products</h1>
 
-      <p className="mb-6 text-gray-600">
-        This page will show products.
-      </p>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {products.map((product, index) => (
+      <div className="grid grid-cols-2 gap-4">
+        {products.map((product) => (
           <ProductCard
-            key={index}
-            name={product.name}
+            key={product.id}
+            name={product.title}
             price={product.price}
           />
         ))}
